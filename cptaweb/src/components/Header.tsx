@@ -41,7 +41,10 @@ const Header: FC = () => (
           </ul>
         </div>
         <div className="flex flex-row gap-4 items-center">
-          <RiSearchLine />
+          <input type="search">
+            <RiSearchLine />
+          </input>
+
           <button className="bg-white text-[#140342] py-[10px] px-[10px] rounded-xl mr-[20px] origin-center hover:origin-top hover:bg-[#140342] hover:text-white hover:drop-shadow-xl">
             Гишүүний програм
           </button>
