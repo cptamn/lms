@@ -2,26 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.container {
+  @apply max-w-[1390px] mx-auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Classes for User Comment Section Slider */
+/* .user-section-prev {
+  @apply text-xl text-head p-[15px] bg-white rounded-full hover:bg-white/80 duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed;
+} */
+
+/* .user-section-next {
+  @apply text-xl text-head p-[15px] bg-white rounded-full hover:bg-white/80 duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed;
+} */
+
+/* Classes for Top Categories Section Slider */
+/* .top-categories-prev {
+  @apply text-2xl text-color-2 hover:text-color-2/70 duration-300 disabled:text-gray-400 disabled:cursor-not-allowed;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.top-categories-next {
+  @apply text-2xl text-color-2 hover:text-color-2/70 duration-300 disabled:text-gray-400 disabled:cursor-not-allowed;
+}
+
+.top-categories-pagination {
+  @apply flex items-center gap-1;
+}
+
+.top-categories-pagination {
+  width: auto !important;
+}
+
+.top-categories-pagination .swiper-pagination-bullet {
+  @apply bg-icon;
+}
+
+.top-categories-pagination .swiper-pagination-bullet-active {
+  @apply bg-color-1;
+} */
+
+/* Blob Classes */
+.blob-1 {
+  border-radius: 47% 53% 22% 78% / 73% 49% 51% 27%;
 }

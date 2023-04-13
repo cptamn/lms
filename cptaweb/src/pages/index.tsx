@@ -1,17 +1,17 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import Header from "@/components/Header";
-
-const inter = Inter({ subsets: ["latin"] });
+import MembershipFees from "../components/MembershipFees";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title key="title">Нүүр хуудас | IntelliSense</title>
+        <title key="title">
+          Нүүр хуудас | Монгол Улсын Татварын Мэргэшсэн зөвлөхийн нийгэмлэг
+        </title>
       </Head>
       <Header />
+      <MembershipFees />
     </>
   );
 }
