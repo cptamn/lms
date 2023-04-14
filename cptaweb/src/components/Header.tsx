@@ -57,11 +57,34 @@ const Header: FC = () => (
         </div>
       </div>
       {/* menu section */}
-      <div className="flex items-center justify-around max-w-[1240px] mx-auto bg-white translate-y-8 ">
-        <ul className="flex uppercase text-xs-regular ">
-          <div className="py-6 px-6 border border-l-2 cursor-pointer hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
+      <div className="flex items-center justify-around justify-center max-w-[1240px] mx-auto bg-white translate-y-0 ">
+        <ul className="flex uppercase text-xs-regular">
+          <li className="py-6 px-6 border border-l-2 cursor-pointer hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2 group relative">
             <Link href="/">Гишүүнчлэл</Link>
-          </div>
+            <div className="flex justify-around opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-[80px]  left-0 bg-white w-[450px]">
+              <ul className="flex flex-col gap-5">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+              </ul>
+              <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+              </ul>
+              <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+              </ul>
+            </div>
+          </li>
           <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
             <Link href="/">Мэдээ, мэдээлэл</Link>
           </div>
