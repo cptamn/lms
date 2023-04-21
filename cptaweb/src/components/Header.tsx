@@ -1,122 +1,95 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import {
-  RiMenu4Fill,
-  RiSearchLine,
-  RiPhoneFill,
-  RiMailFill,
-} from "react-icons/ri";
-import logoTMZn from "../assets/MUTMZN_logo_23.svg";
+import { MdKeyboardArrowDown, MdMail, MdPhone } from "react-icons/md";
+import LogoMain from "../assets/MUTMZN_logo_PNG.png";
+import Image from "next/image";
 
 const Header: FC = () => (
-  <div className="w-full bg-green">
-    <div className="bg-[#E5E5E5] w-screen">
-      <div className="max-w-[1240px] mx-auto flex items-center justify-between grid-cols-2 ">
-        <div className="flex gap-4">
-          <div className="flex items-center cursor-pointer">
-            <RiPhoneFill />
-            <h1>76118989</h1>
-          </div>
-          <div className="flex items-center cursor-pointer">
-            <RiMailFill />
-            <h1>info@cpta.mn</h1>
-          </div>
-        </div>
-        <div className="flex py-3 gap-4">
-          <Link href="/">Ажлын байр</Link>
-          <div className="flex items-center">
-            <RiSearchLine className="absolute z-10 ml-40 cursor-pointer" />
-            <input
-              type="text"
-              placeholder="хайх"
-              className="flex relative rounded-sm"
-            />
-          </div>
-        </div>
+  <div className="max-w-full bg-white ">
+    {/* Top Header */}
+    <div className="max-w-[1299px] mx-auto flex items-center justify-between text-[#9AA5B3] text-xs-medium py-4 border-b-2 ">
+      <div className="flex  gap-4">
+        <button className="flex items-center gap-2 hover:text-[#3764EB]">
+          <MdPhone />
+          <p>76118989</p>
+        </button>
+        <button className="flex items-center gap-2 hover:text-[#3764EB]">
+          <MdMail />
+          <p>info@cpta.mn</p>
+        </button>
+      </div>
+      <div className="flex gap-3">
+        <Link href="/" className="hover:text-[#3764EB]">
+          Ажлын байр
+        </Link>
+        <button className="flex items-center hover:text-[#3764EB]">
+          <p>English</p>
+          <MdKeyboardArrowDown />
+        </button>
       </div>
     </div>
-    <div className="bg-[#140342] ">
-      <div className="flex items-center justify-between max-w-[1240px] mx-auto">
-        <div className="pl-4 flex items-center w-[250px] cursor-pointer mt-6">
-          <Image
-            src={logoTMZn}
-            alt="/"
-            width={50}
-            height={50}
-            className="bg-white rounded-full mr-3"
-          />
-          <h1 className="text-xs-regular text-white">
-            Монгол Улсын Татварын Мэргэшсэн зөвлөхийн нийгэмлэг
-          </h1>
+    {/* Header center */}
+    <div className="flex items-center justify-between max-w-[1299px] mx-auto ">
+      <button className="flex items-center py-6 hover:text-[#3764EB]">
+        <Image src={LogoMain} alt="logo" width={50} height={50} />
+        <div className="flex flex-col items-baseline pl-2">
+          <p className="uppercase ">Монгол улсын татварын</p>
+          <p className="uppercase">мэргэшсэн зөвлөхийн нийгэмлэг</p>
         </div>
-        <div className="flex flex-row gap-4 items-center mt-6">
-          <button className="bg-white text-[#140342] py-[10px] px-[10px] rounded-xl mr-[20px] origin-center hover:origin-top hover:bg-[#140342] hover:text-white hover:drop-shadow-xl hover:border border-white">
-            Гишүүний програм
-          </button>
-        </div>
+      </button>
+      <div className="flex items-center gap-6 text-sl uppercase">
+        <Link href="/" className="hover:text-[#3764EB]">
+          Сургалтын төлөвлөгөө
+        </Link>
+        <Link href="/" className="hover:text-[#3764EB]">
+          Судалгаа
+        </Link>
+        <Link href="/" className="hover:text-[#3764EB]">
+          Tax bulletin
+        </Link>
       </div>
-      {/* menu section */}
-      <div className="flex items-center justify-around justify-center max-w-[1240px] mx-auto bg-white translate-y-0 ">
-        <ul className="flex uppercase text-xs-regular">
-          <li className="py-6 px-6 border border-l-2 cursor-pointer hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2 group relative">
-            <Link href="/">Гишүүнчлэл</Link>
-            <div className="flex justify-around opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-[80px]  left-0 bg-white w-[450px]">
-              <ul className="flex flex-col gap-5">
-                <li>menu1</li>
-                <li>menu2</li>
-                <li>menu3</li>
-                <li>menu4</li>
-                <li>menu5</li>
-              </ul>
-              <ul>
-                <li>menu1</li>
-                <li>menu2</li>
-                <li>menu3</li>
-                <li>menu4</li>
-                <li>menu5</li>
-              </ul>
-              <ul>
-                <li>menu1</li>
-                <li>menu2</li>
-                <li>menu3</li>
-                <li>menu4</li>
-                <li>menu5</li>
-              </ul>
-            </div>
-          </li>
-          <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
-            <Link href="/">Мэдээ, мэдээлэл</Link>
-          </div>
-          <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
-            <Link href="/">Сургалт, шалгалт</Link>
-          </div>
-          <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
-            <Link href="/">Татварын боловсрол</Link>
-          </div>
-          <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
-            <Link href="/">Судалгаа</Link>
-          </div>
-          <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
-            <Link href="/">Хууль тогтоомж</Link>
-          </div>
-          <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
-            <Link href="/">Олон нийт</Link>
-          </div>
-          <div className=" py-6 px-6 border border-l-1 hover:bg-[#00FF84] hover:text-[#140342] hover:transition delay-100 duration-300 ease-in hover:translate-y-2">
-            <Link href="/">Танилцуулга</Link>
-          </div>
-        </ul>
-      </div>
+      <button className="py-3 px-6 rounded-lg bg-[#3764EB] text-white hover:bg-[#FEE100] hover:text-[#3764EB]">
+        Гишүүний програм
+      </button>
+    </div>
+    {/* Header bottom */}
+    <div className="bg-[#2F5ADD]">
+      <ul className="flex max-w-[1299px] items-center justify-between mx-auto text-white text-xs-medium uppercase py-5">
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>Гишүүнчлэл</li>
+          <MdKeyboardArrowDown />
+        </Link>
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>мэдээ, мэдээлэл</li>
+          <MdKeyboardArrowDown />
+        </Link>
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>сургалт шалгалт</li>
+          <MdKeyboardArrowDown />
+        </Link>
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>татварын боловсрол</li>
+          <MdKeyboardArrowDown />
+        </Link>
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>судалгаа</li>
+          <MdKeyboardArrowDown />
+        </Link>
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>хууль тогтоомж</li>
+          <MdKeyboardArrowDown />
+        </Link>
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>олон нийт</li>
+          <MdKeyboardArrowDown />
+        </Link>
+        <Link href="/" className="flex items-center gap-1 hover:text-[#FEE100]">
+          <li>танилцуулга</li>
+          <MdKeyboardArrowDown />
+        </Link>
+      </ul>
     </div>
   </div>
-
-  // <div className="bg-[#E5E5E5] w-screen">
-  //   <div className="max-w-[1240px] mx-auto">
-  //
-
-  //   </div>
-  // </div>
 );
 
 export default Header;

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "@/components/Header";
-import MembershipFees from "../components/MembershipFees";
+import SliderSection from "@/components/SliderSection";
+import LatestNews from "@/components/LatestNews";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
         </title>
       </Head>
       <Header />
-      <MembershipFees />
+      <SliderSection />
+      <LatestNews />
     </>
   );
 }

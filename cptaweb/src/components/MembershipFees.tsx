@@ -1,61 +1,26 @@
 import Image from "next/image";
 import { FC } from "react";
-import React, { useRef, useState } from "react";
-import logoTMZn from "../assets/MUTMZN_logo_23.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import zurag2 from "../assets/zurag1.avif";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import React from "react";
 
 const MembershipFees: FC = () => (
-  <>
-    <Swiper
-      cssMode={true}
-      navigation={true}
-      pagination={{
-        clickable: true,
-      }}
-      preventClicksPropagation={false}
-      mousewheel={true}
-      keyboard={true}
-      modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-      className="mySwiper flex flex-col items-center justify-center w-[1240px]"
-    >
-      <SwiperSlide>
-        <div className="container">
-          <div className="aspect-video">
-            <Image
-              src={zurag2}
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="relative">
-              <h1 className="text-white">Hello world!</h1>
-            </div>
-          </div>
+  <div className="bg-[#E5E5E5] w-screen">
+    <div className="max-w-[1240px] mx-auto h-[450px] pt-20">
+      <div className="flex items-center grid-cols-2">
+        <div className="border border-solid border-blue-800 w-[620px] h-[300px]"></div>
+        <div className="flex flex-col justify-center border border-solid border-blue-800 w-[620px] h-[300px] gap-2 px-4">
+          <h1 className="text-3xl-bold">
+            “Татварын хуулийг хэн сайн мэдэх вэ? 2023” тэмцээний тестийн дүн
+            гарлаа
+          </h1>
+          <p>
+            Монголын татварын алба, Татварын мэргэшсэн зөвлөхийн нийгэмлэг
+            хамтран зохион байгуулж буй ”Татварын хуулийг хэн сайн мэдэх вэ?
+          </p>
+          <p>2023-04-13</p>
         </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="container">
-          <div className="aspect-video">
-            <Image
-              src={zurag2}
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="relative">
-              <h1 className="text-white">Hello world!</h1>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-    </Swiper>
-  </>
+      </div>
+    </div>
+  </div>
 );
 
 export default MembershipFees;
