@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import SliderSection from "@/components/SliderSection";
 import LatestNews from "@/components/LatestNews";
 import HomeSectionTwo from "@/components/HomeSectionTwo";
-import Footer from "@/components/Footer";
+
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       <SliderSection />
       <LatestNews />
       <HomeSectionTwo />
+
     </>
   );
 }

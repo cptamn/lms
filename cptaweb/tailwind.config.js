@@ -88,6 +88,13 @@ module.exports = {
             fontWeight: "500",
           },
         ],
+        "xl2-medium": [
+          "16px",
+          {
+            lineHeight: "20px",
+            fontWeight: "500",
+          },
+        ],
         "2xl-medium": [
           "24px",
           {
