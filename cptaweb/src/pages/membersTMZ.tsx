@@ -4,7 +4,7 @@ const membersTMZ = () => {
   return (
     <div className="w-[1299px] mx-auto">
       <table>
-        <thead>
+        <thead className="">
           <tr>
             <th>Д/д</th>
             <th>Байгууллагын нэр</th>

@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-[1299px] mx-auto text-white text-center border-t py-6 mt-8">
-          <p className=" select-none">
+          <p className=" select-none ">
             ©2010-2023 БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН. ТМЗ нийгэмлэг. www.cpta.mn
           </p>
         </div>
