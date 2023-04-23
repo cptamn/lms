@@ -44,3 +44,11 @@
 .blob-1 {
   border-radius: 47% 53% 22% 78% / 73% 49% 51% 27%;
 }
+
+.hero-slider-prev {
+  @apply absolute left-0 top-[50%] -translate-y-[50%] text-5xl cursor-pointer
+}
+
+.hero-slider-next {
+  @apply absolute right-0 top-[50%] -translate-y-[50%] text-5xl cursor-pointer
+}
