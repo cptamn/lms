@@ -44,7 +44,7 @@ const SliderItem = ({ slide }: { slide: { url: string } }) => (
         src={slideIMG}
         alt="arrowRight"
         width={600}
-        height={600}
+        height={400}
         className="w-screen h-[50%] rounded-xl"
       />
     </div>

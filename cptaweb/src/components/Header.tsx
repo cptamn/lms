@@ -54,7 +54,7 @@ const links = [
         ],
       },
       {
-        Head: "СУРГАЛТ",
+        Head: "Шалгалт",
         sublinks: [
           { name: "Сургалтын төлөвлөгөө", link: "/" },
           { name: "Сорил шалгалтад бэлтгэх сургалтын хуваарь", link: "/" },
@@ -64,7 +64,7 @@ const links = [
         ],
       },
       {
-        Head: "СУРГАЛТ",
+        Head: "Дүрэм, журам",
         sublinks: [
           { name: "Сургалтын төлөвлөгөө", link: "/" },
           { name: "Сорил шалгалтад бэлтгэх сургалтын хуваарь", link: "/" },
@@ -109,7 +109,7 @@ const links = [
         ],
       },
       {
-        Head: "СУРГАЛТ",
+        Head: "Шалгалт",
         sublinks: [
           { name: "Сургалтын төлөвлөгөө", link: "/" },
           { name: "Сорил шалгалтад бэлтгэх сургалтын хуваарь", link: "/" },
@@ -119,7 +119,7 @@ const links = [
         ],
       },
       {
-        Head: "СУРГАЛТ",
+        Head: "Дүрэм, журам",
         sublinks: [
           { name: "Сургалтын төлөвлөгөө", link: "/" },
           { name: "Сорил шалгалтад бэлтгэх сургалтын хуваарь", link: "/" },
@@ -268,7 +268,10 @@ const Header: FC = () => {
             </div>
           </button>
           <div className="flex items-center gap-6 text-sl uppercase">
-            <Link href="/" className="hover:text-[#3764EB]">
+            <Link
+              href="/"
+              className="hover:text-[#3764EB] hover:ease-in hover:duration-300"
+            >
               Сургалтын төлөвлөгөө
             </Link>
             <Link href="/" className="hover:text-[#3764EB]">
@@ -284,17 +287,24 @@ const Header: FC = () => {
         </div>
         {/* Header bottom */}
         <div className="bg-[#2F5ADD]">
-          <ul className="flex max-w-[1299px] items-center justify-between mx-auto text-white text-xs-medium py-5">
-            {links.map((link, index) => (
-              <li
-                key={`menu-id-${index}`}
-                className="flex items-center gap-1 hover:text-[#FEE100] group cursor-pointer uppercase relative"
-              >
-                {link.name}
-                {link.submenu && <NavbarDropdown links={link.sublinks} />}
-                <MdKeyboardArrowDown />
-              </li>
-            ))}
+          <ul className="flex max-w-[1299px] items-center justify-between mx-auto text-white text-xs-medium py-5 relative">
+            {links.map((link, index) => {
+              const isFull = link.sublinks.length >= 2;
+              return (
+                <li
+                  key={`menu-id-${index}`}
+                  className={`flex items-center gap-1 hover:text-[#FEE100] group cursor-pointer uppercase ${
+                    !isFull && "relative"
+                  }`}
+                >
+                  {link.name}
+                  {link.submenu && (
+                    <NavbarDropdown links={link.sublinks} isFull={isFull} />
+                  )}
+                  <MdKeyboardArrowDown />
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
