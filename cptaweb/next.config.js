@@ -8,7 +8,7 @@ module.exports = {
       {
         protocol: "https",
         hostname: "via.placeholder.com",
-        pathname: "/**",
+        pathname: "**",
       },
       // {
       //   protocol: "https",

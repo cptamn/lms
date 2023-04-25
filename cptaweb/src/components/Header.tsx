@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
 import { MdKeyboardArrowDown, MdMail, MdPhone } from "react-icons/md";
-import LogoMain from "../assets/MUTMZN_logo_PNG.png";
 import Image from "next/image";
 import NavbarDropdown from "./NavbarDropdown";
 
@@ -14,8 +13,14 @@ const links = [
         Head: "",
         sublinks: [
           { name: "Хүндэт гишүүн", link: "/honorary-member" },
-          { name: "Таны гишүүний хураамж юунд зарцуулагддаг вэ?", link: "/" },
-          { name: "Татварын итгэмжлэгдсэн хуулийн этгээд", link: "/" },
+          {
+            name: "Таны гишүүний хураамж юунд зарцуулагддаг вэ?",
+            link: "/membersPrice",
+          },
+          {
+            name: "Татварын итгэмжлэгдсэн хуулийн этгээд",
+            link: "/tmz-company",
+          },
           { name: "Монгол Улсын Татварын Мэргэшсэн зөвлөх", link: "/" },
           { name: "Татварын шинжээч", link: "/" },
         ],
@@ -260,13 +265,20 @@ const Header: FC = () => {
         </div>
         {/* Header center */}
         <div className="flex items-center justify-between max-w-[1299px] mx-auto ">
-          <button className="flex items-center py-6 hover:text-[#3764EB]">
-            <Image src={LogoMain} alt="logo" width={50} height={50} />
-            <div className="flex flex-col items-baseline pl-2">
-              <p className="uppercase ">Монгол улсын татварын</p>
-              <p className="uppercase">мэргэшсэн зөвлөхийн нийгэмлэг</p>
-            </div>
-          </button>
+          <Link href="/">
+            <button className="flex items-center py-6 hover:text-[#3764EB]">
+              <Image
+                src="/assets/MUTMZN_logo_PNG.png"
+                alt="logo"
+                width={50}
+                height={50}
+              />
+              <div className="flex flex-col items-baseline pl-2">
+                <p className="uppercase ">Монгол улсын татварын</p>
+                <p className="uppercase">мэргэшсэн зөвлөхийн нийгэмлэг</p>
+              </div>
+            </button>
+          </Link>
           <div className="flex items-center gap-6 text-sl uppercase">
             <Link
               href="/"

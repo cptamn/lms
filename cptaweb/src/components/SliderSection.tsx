@@ -12,8 +12,6 @@ import {
   BsChevronCompactRight,
   BsFullscreen,
 } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
-import slideIMG from "../assets/medeeZurag.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
@@ -41,7 +39,7 @@ const SliderItem = ({ slide }: { slide: { url: string } }) => (
   <div className="flex items-center">
     <div className="flex items-center justify-center w-[50%] gap-4 px-5">
       <Image
-        src={slideIMG}
+        src={"/assets/medeeZurag.png"}
         alt="arrowRight"
         width={600}
         height={400}

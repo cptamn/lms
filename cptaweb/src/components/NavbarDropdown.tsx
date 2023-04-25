@@ -35,7 +35,7 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({ links, isFull }) => {
                   key={`dropdown-${index}`}
                   className="flex flex-col items-start gap-5 whitespace-nowrap"
                 >
-                  <h1 className="hover:text-white/70 uppercase text-xl border-b w-full border-indigo-500">
+                  <h1 className="hover:text-white/70 uppercase text-xl border-b w-full border-indigo-500 ">
                     {mysublinks.Head}
                   </h1>
                   {mysublinks.sublinks.map((slink, index) => (
@@ -45,7 +45,7 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({ links, isFull }) => {
                     >
                       <Link
                         href={slink.link}
-                        className="hover:text-head normal-case "
+                        className="hover:text-head normal-case hover:text-md hover:text-2xl"
                       >
                         {slink.name}
                       </Link>
