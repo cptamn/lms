@@ -55,9 +55,9 @@ const hMember = [
 const honoraryMember = () => {
   return (
     <>
-      <div className="w-full bg-gradient-to-r from-Gray-600 via-Gray-400 to-Gray-200 ">
+      <div className="w-full ">
         <div className="w-[1299px] items-center mx-auto">
-          <div className="py-24">
+          <div className="py-24 bg-gradient-to-r from-Gray-600 via-Gray-400 to-Gray-200">
             <h1 className="text-3xl">Хүндэт гишүүн</h1>
             <p>Татварын мэргэшсэн зөвлөхийн нийгэмлэгийн хүндэт гишүүд</p>
           </div>

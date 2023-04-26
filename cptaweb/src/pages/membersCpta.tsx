@@ -2,7 +2,7 @@ import React from "react";
 
 const membersCpta = () => {
   return (
-    <div className="w-[1299px] h-[250px] bg-slate-500 mx-auto">
+    <div className="w-[1299px] h-[250px] mx-auto">
       <div className="flex">
         <div>
           <div className="pt-4">
