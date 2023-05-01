@@ -29,13 +29,13 @@ const HomeSectionTwo = () => {
       <div className="w-[1299px] mx-auto flex items-center justify-around gap-4">
         <Link
           href="/tmz-company"
-          className="w-full h-20 py-2 px-10 bg-[#3764EB] text-white hover:bg-slate-300 hover:text-[#3764EB] hover:border-blue-500 hover:border-solid"
+          className="w-full grid place-items-center rounded-md h-20 py-2 px-10 bg-[#3764EB] text-white hover:bg-slate-300 hover:text-[#3764EB] hover:border-blue-500 hover:border-solid"
         >
           Татварын итгэмжлэгдсэн хуулийн этгээд
         </Link>
         <Link
           href="/membersCpta"
-          className="w-full h-20 py-2 px-10 bg-[#3764EB] text-white hover:bg-slate-300 hover:text-[#3764EB] hover:border-blue-500"
+          className="w-full grid place-items-center rounded-md h-20 py-2 px-10 bg-[#3764EB] text-white hover:bg-slate-300 hover:text-[#3764EB] hover:border-blue-500"
         >
           Татварын Мэргэшсэн Зөвлөх
         </Link>
