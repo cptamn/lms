@@ -1,6 +1,26 @@
-import React, { FC } from "react";
+import axios from "axios";
+import React, { FC, useEffect, useState } from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { Idata } from "./interfaces/data";
 
+// interface dataProps {
+//   data: Idata;
+// }
+
+// const [data, setData] = useState<Idata[]>([]);
+
+// useEffect(() => {
+//   axios
+//     .get("http://localhost:8080/todos")
+//     .then((res) => {
+//       // const data: Idata[] = res.data;
+//       setData(res.data);
+//       console.log("data", data);
+//     })
+//     .catch((e) => {
+//       console.log(e);
+//     });
+// }, []);
 const LatestNews: FC = () => (
   <div className="max-w-[1299px] mx-auto flex flex-col  pt-16">
     <div className="flex flex-row items-center justify-between pb-14">
