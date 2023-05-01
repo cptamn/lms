@@ -45,7 +45,7 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({ links, isFull }) => {
                     >
                       <Link
                         href={slink.link}
-                        className="hover:text-head normal-case hover:text-md hover:text-2xl"
+                        className="hover:text-head normal-case hover:text-md hover:border-b-2 hover:border-indigo-500 hover:transition hover:duration-700 hover:ease-in-out"
                       >
                         {slink.name}
                       </Link>

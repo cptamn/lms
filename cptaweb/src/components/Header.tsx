@@ -285,14 +285,20 @@ const Header: FC = () => {
           <div className="flex items-center gap-6 text-sl uppercase">
             <Link
               href="/"
-              className="hover:text-[#3764EB] hover:ease-in hover:duration-300"
+              className="hover:text-[#3764EB] hover:border hover:border-indigo-500 hover:transition hover:duration-700 hover:ease-in-out hover:py-2 hover:px-2 hover:rounded-md"
             >
               Сургалтын төлөвлөгөө
             </Link>
-            <Link href="/" className="hover:text-[#3764EB]">
+            <Link
+              href="/"
+              className="hover:text-[#3764EB] hover:border hover:border-indigo-500 hover:transition hover:duration-700 hover:ease-in-out hover:py-2 hover:px-2 hover:rounded-md"
+            >
               Судалгаа
             </Link>
-            <Link href="/" className="hover:text-[#3764EB]">
+            <Link
+              href="/"
+              className="hover:text-[#3764EB] hover:border hover:border-indigo-500 hover:transition hover:duration-700 hover:ease-in-out hover:py-2 hover:px-2 hover:rounded-md"
+            >
               Tax bulletin
             </Link>
           </div>
