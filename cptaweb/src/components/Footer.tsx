@@ -13,15 +13,15 @@ const Footer = () => {
         <div className="w-[1299px] mx-auto text-white pt-14 grid grid-cols-4">
           <div className="col-span-1">
             <h1 className="uppercase pb-3">Холбоо барих</h1>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <FaPhoneSquareAlt />
               <Link href="/">76118989</Link>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <ImMail />
               <Link href="/">info@cpta.mn</Link>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <FaFacebookSquare />
               <Link href="/">FB/MACTConcalting</Link>
             </div>

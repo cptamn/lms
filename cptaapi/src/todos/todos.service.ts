@@ -8,7 +8,9 @@ import { Secured } from 'src/auth/secured.decorator';
 
 @Injectable()
 export class TodosService {
-  constructor(@InjectModel(Todo.name) private readonly todoModel: Model<Todo>) {}
+  constructor(
+    @InjectModel(Todo.name) private readonly todoModel: Model<Todo>,
+  ) {}
 
   async create(createTodoDto: CreateTodoDto): Promise<Todo> {
     console.log('createTodoDto:', createTodoDto);

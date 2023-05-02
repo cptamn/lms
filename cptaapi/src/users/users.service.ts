@@ -7,7 +7,9 @@ import { Model } from 'mongoose';
 
 @Injectable()
 export class UsersService {
-  constructor(@InjectModel(User.name) private readonly userModel: Model<User>) {}
+  constructor(
+    @InjectModel(User.name) private readonly userModel: Model<User>,
+  ) {}
   async create(createUserDto: CreateUserDto) {
     return await this.userModel.create(createUserDto);
   }
@@ -25,7 +27,10 @@ export class UsersService {
   }
 
   async update(_id: string, updateUserDto: UpdateUserDto) {
-    const result = await this.userModel.findOneAndUpdate({ _id }, updateUserDto);
+    const result = await this.userModel.findOneAndUpdate(
+      { _id },
+      updateUserDto,
+    );
     return result;
   }
 

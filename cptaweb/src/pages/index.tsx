@@ -3,9 +3,9 @@ import Header from "@/components/Header";
 import SliderSection from "@/components/SliderSection";
 import LatestNews from "@/components/LatestNews";
 import HomeSectionTwo from "@/components/HomeSectionTwo";
+import axios from "axios";
 
-
-export default function Home() {
+export default function Home({ news }: { news: any }) {
   return (
     <>
       <Head>
@@ -15,9 +15,19 @@ export default function Home() {
       </Head>
 
       <SliderSection />
-      <LatestNews />
+      <LatestNews items={news} />
       <HomeSectionTwo />
-
     </>
   );
+}
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await axios.get(`http://localhost:8080/todos`);
+
+  const news = await res.data;
+  console.log(news);
+
+  // Pass data to the page via props
+  return { props: { news } };
 }

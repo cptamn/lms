@@ -5,10 +5,12 @@ import { TodosModule } from './todos/todos.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { CategoryModule } from './category/category.module';
+import { CommentModule } from './comment/comment.module';
 import env from './env';
 
 @Module({
-  imports: [MongooseModule.forRoot(env.MONGO_URL), TodosModule, UsersModule, AuthModule],
+  imports: [MongooseModule.forRoot(env.MONGO_URL), TodosModule, UsersModule, AuthModule, CategoryModule, CommentModule],
   controllers: [AppController],
   providers: [AppService],
 })
