@@ -28,16 +28,18 @@ export class CategoryService {
   }
 
   async update(id: string, updateCategoryDto: UpdateCategoryDto) {
+    console.log(updateCategoryDto);
     const result = await this.CategoryModule.updateOne(
-      { id },
+      { _id: id },
       updateCategoryDto,
     );
     return result;
   }
 
-  @Secured('admin')
+  // @Secured('admin')
   async remove(id: string) {
-    await this.CategoryModule.deleteOne({ id });
+    console.log('ustgah function ajillaa...', id);
+    await this.CategoryModule.deleteOne({ _id: id });
     return id;
   }
 }

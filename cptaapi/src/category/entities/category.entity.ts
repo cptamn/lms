@@ -6,7 +6,7 @@ export class Category {
   @Prop({ default: () => nanoid(), type: String })
   _id: string;
 
-  @Prop({ required: true })
+  @Prop()
   name: string;
 
   createdAt: Date;
