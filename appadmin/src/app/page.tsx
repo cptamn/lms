@@ -1,6 +1,7 @@
 import { getAllCategory } from "../../api";
 import AddCategory from "./components/Category/AddCategory";
 import CategoryList from "./components/Category/CategoryList";
+import Post from "./components/News/Post";
 
 export default async function Home() {
   const dataCat = await getAllCategory();
@@ -13,6 +14,7 @@ export default async function Home() {
         <AddCategory />
       </div>
       <CategoryList dataCat={dataCat} />
+      <Post />
     </main>
   );
 }

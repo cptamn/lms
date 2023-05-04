@@ -18,7 +18,7 @@ const CategoryList: React.FC<CatListProps> = ({ dataCat }) => {
         </thead>
         <tbody>
           {dataCat.map((dataCats) => (
-            <Category key={dataCats.id} dataCat={dataCats} />
+            <Category key={dataCats._id} dataCat={dataCats} />
           ))}
           {/* row 1 */}
         </tbody>

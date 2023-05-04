@@ -15,8 +15,8 @@ const AddCategory = () => {
   const handleSubmitNewCat: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     await addCat({
-      id: uuidv4(),
-      title: newCatgory,
+      _id: uuidv4(),
+      name: newCatgory,
     });
     setNewCategory("");
     setModalOpen(false);

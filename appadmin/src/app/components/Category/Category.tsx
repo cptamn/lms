@@ -15,13 +15,13 @@ const Category: React.FC<CategoryProps> = ({ dataCat }) => {
   const router = useRouter();
   const [openModulEdit, setOpenModulEdit] = useState<boolean>(false);
   const [openModulDelete, setOpenModulDelete] = useState<boolean>(false);
-  const [dataToEdit, setDataToEdit] = useState<string>(dataCat.title);
+  const [dataToEdit, setDataToEdit] = useState<string>(dataCat.name);
 
   const handleSubmitEditCat: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     await editCat({
-      id: dataCat.id,
-      title: dataToEdit,
+      _id: dataCat._id,
+      name: dataToEdit,
     });
     setDataToEdit("");
     setOpenModulEdit(false);
@@ -35,8 +35,8 @@ const Category: React.FC<CategoryProps> = ({ dataCat }) => {
   };
 
   return (
-    <tr key={dataCat.id}>
-      <td className="w-full">{dataCat.title}</td>
+    <tr key={dataCat._id}>
+      <td className="w-full">{dataCat.name}</td>
       <td className="flex gap-5">
         <BiEdit
           onClick={() => setOpenModulEdit(true)}
@@ -70,7 +70,10 @@ const Category: React.FC<CategoryProps> = ({ dataCat }) => {
         <Modal modalOpen={openModulDelete} setModalOpen={setOpenModulDelete}>
           <h3 className="text-lg">Устгахдаа итгэлтэй байна уу?</h3>
           <div className="modal-action">
-            <button onClick={() => handleDeleteCat(dataCat.id)} className="btn">
+            <button
+              onClick={() => handleDeleteCat(dataCat._id)}
+              className="btn"
+            >
               Тийм
             </button>
           </div>
