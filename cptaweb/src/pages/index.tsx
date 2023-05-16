@@ -16,7 +16,9 @@ export default function Home({ news }: { news: any }) {
 
       <SliderSection />
       <LatestNews items={news} />
-      <HomeSectionTwo />
+      <div className="w-[1299px] mx-auto">
+        <HomeSectionTwo />
+      </div>
     </>
   );
 }

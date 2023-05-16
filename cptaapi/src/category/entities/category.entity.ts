@@ -10,6 +10,7 @@ export class Category {
   name: string;
 
   createdAt: Date;
+
   updatedAt: Date;
 }
 

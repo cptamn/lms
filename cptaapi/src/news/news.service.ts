@@ -8,34 +8,33 @@ import { News } from './entities/news.entity';
 
 @Injectable()
 export class NewsService {
-  NewsModule: any;
   constructor(
-    @InjectModel(News.name) private readonly todoModel: Model<News>,
+    @InjectModel(News.name) private readonly newsModel: Model<News>,
   ) {}
 
   async create(createNewsDto: CreateNewsDto): Promise<News> {
     console.log('createNewsDto:', CreateNewsDto);
-    const result = new this.NewsModule(createNewsDto);
+    const result = new this.newsModel(createNewsDto);
     return result.save();
   }
 
   async findAll() {
-    const result = await this.NewsModule.find();
+    const result = await this.newsModel.find();
     return result;
   }
 
   async findOne(_id: string) {
-    return await this.NewsModule.findById(_id);
+    return await this.newsModel.findById(_id);
   }
 
   async update(_id: string, updateNewsDto: UpdateNewsDto) {
-    const result = await this.NewsModule.updateOne({ _id }, updateNewsDto);
+    const result = await this.newsModel.updateOne({ _id }, updateNewsDto);
     return result;
   }
 
   @Secured('admin')
   async remove(_id: string) {
-    await this.NewsModule.deleteOne({ _id });
+    await this.newsModel.deleteOne({ _id });
     return _id;
   }
 }

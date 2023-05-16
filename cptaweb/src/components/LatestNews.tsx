@@ -15,10 +15,13 @@ const LatestNews: FC = ({ items }) => {
           <HiOutlineArrowLongRight />
         </div>
       </div>
-      <div className="flex items-center justify-between gap-6 py-9">
+      <div className="flex items-center justify-between gap-6 py-9 ">
         {items.map((item) => {
           return (
-            <div className="bg-[#C4C4C4] rounded-md w-[416px] h-[517px] relative">
+            <div
+              className="bg-[#C4C4C4] rounded-md w-[416px] h-[517px] relative"
+              data-aos="flip-left"
+            >
               <Image src={item.picUrl} alt="zurag" width={450} height={300} />
 
               <div className="bg-white rounded-md w-[416px] h-[255px] absolute bottom-0 border border-shadow-2xl px-8">
@@ -30,7 +33,7 @@ const LatestNews: FC = ({ items }) => {
                 </div>
                 <h2 className="text-20x7-medium ">{item.title}</h2>
                 <p className="py-7 line-clamp-2 pb-2">{item.description}</p>
-                <button className="bg-[#EEEEEE] py-2 px-6 rounded-md ml-3">
+                <button className="btn btn-primary py-2 px-6 rounded-md ml-3">
                   Цааш унших...
                 </button>
               </div>

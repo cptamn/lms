@@ -36,7 +36,7 @@ const Category: React.FC<CategoryProps> = ({ dataCat }) => {
 
   return (
     <tr key={dataCat._id}>
-      <td className="w-full">{dataCat.name}</td>
+      <td className="w-full bg-transparent">{dataCat.name}</td>
       <td className="flex gap-5">
         <BiEdit
           onClick={() => setOpenModulEdit(true)}
