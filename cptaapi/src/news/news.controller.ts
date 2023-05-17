@@ -17,6 +17,7 @@ export class NewsController {
 
   @Post()
   create(@Body() createNewsDto: CreateNewsDto) {
+    console.log('createNewsDto:', createNewsDto);
     return this.newsService.create(createNewsDto);
   }
 

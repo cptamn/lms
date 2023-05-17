@@ -11,7 +11,15 @@ import { NewsModule } from './news/news.module';
 import env from './env';
 
 @Module({
-  imports: [MongooseModule.forRoot(env.MONGO_URL), TodosModule, UsersModule, AuthModule, CategoryModule, CommentModule, NewsModule],
+  imports: [
+    MongooseModule.forRoot(env.MONGO_URL),
+    TodosModule,
+    UsersModule,
+    AuthModule,
+    CategoryModule,
+    CommentModule,
+    NewsModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

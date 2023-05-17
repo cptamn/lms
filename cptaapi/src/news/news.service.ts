@@ -13,7 +13,7 @@ export class NewsService {
   ) {}
 
   async create(createNewsDto: CreateNewsDto): Promise<News> {
-    console.log('createNewsDto:', CreateNewsDto);
+    console.log('createNewsDto:', createNewsDto);
     const result = new this.newsModel(createNewsDto);
     return result.save();
   }

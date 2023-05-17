@@ -3,7 +3,6 @@ export class CreateNewsDto {
   description: string;
   image: string;
   video: string;
-  commentCount: string;
   publisher: string;
-  categoryID: string;
+  category: string;
 }

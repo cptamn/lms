@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { nanoid } from 'nanoid';
+import { Category } from 'src/category/entities/category.entity';
 
 @Schema({ timestamps: true })
 export class News {
@@ -18,14 +19,14 @@ export class News {
   @Prop({ required: true })
   video: string;
 
-  @Prop({ required: true })
+  @Prop({ default: 0 })
   commentCount: string;
 
   @Prop({ required: true })
   publisher: string;
 
-  @Prop({ required: true })
-  categoryID: string;
+  @Prop({ required: true, ref: 'Category', type: String })
+  category: Category | string;
 
   createdAt: Date;
   updatedAt: Date;
