@@ -1,9 +1,20 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { getAllCategory } from "../../api";
 import AddCategory from "./components/Category/AddCategory";
 import CategoryList from "./components/Category/CategoryList";
-// import Post from "./components/News/Post";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 export default async function Home() {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    if (!loaded) {
+      setLoaded(true);
+    }
+  }, []);
+
   const dataCat = await getAllCategory();
   console.log(dataCat);
 
@@ -24,8 +35,8 @@ export default async function Home() {
             <AddCategory />
           </div>
           <CategoryList dataCat={dataCat} />
-          {/* <Post /> */}
         </div>
+        <div>{loaded && <ReactQuill theme="snow" />}</div>
       </div>
     </div>
   );
